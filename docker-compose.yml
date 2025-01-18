@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres
+    container_name: yuit-chart-db-host
+    environment:
+      POSTGRES_DB: yuit-chart-db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminyuitpassword
+    networks:
+      - yuit-net
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  backend:
+    image: yuit-chart-backend-image:latest
+    container_name: yuit-chart-backend
+    networks:
+      - yuit-net
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  frontend:
+    image: yuit-chart-frontend-image:latest
+    container_name: yuit-chart-frontend
+    networks:
+      - yuit-net
+    ports:
+      - "127.0.0.1:3000:8080"
+    restart: unless-stopped
+
+networks:
+  yuit-net:
+    driver: bridge
