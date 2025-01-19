@@ -25,8 +25,8 @@ To run the application locally using Docker Compose, follow these steps:
 - to run container for db: https://github.com/YuesIt17/portfolio-yues-nestjs-docker/blob/main/README.md#settings-of-docker-for-db
 - to create images for:
 
-  - frontend via: https://github.com/YuesIt17/portfolio-yues-nextjs-docker/blob/main/README.md#settings-of-docker-image-for-frontend
-  - backend: https://github.com/YuesIt17/portfolio-yues-nestjs-docker/blob/main/README.md#settings-of-docker-for-db
+  - [frontend](https://github.com/YuesIt17/portfolio-yues-nextjs-docker/blob/main/README.md#settings-of-docker-image-for-frontend)
+  - [backend](https://github.com/YuesIt17/portfolio-yues-nestjs-docker/blob/main/README.md#settings-of-docker-image-for-backend)
 
 - to run the containers via: `docker-compose up -d`
 - to stop and remove the `containers via: docker-compose down`
