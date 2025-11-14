@@ -1,4 +1,4 @@
-# Docker Config Repository
+# 🐳Docker Config Repository
 
 This repository contains Docker configurations and orchestration for the **portfolio-yues-docker-config**, which consists of a frontend built with **NestJS** and a backend built with **Next.js**. It uses Docker Compose to define and run multi-container Docker applications.
 
